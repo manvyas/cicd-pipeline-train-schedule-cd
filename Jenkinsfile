@@ -4,6 +4,7 @@ pipeline {
         label 'my-defined-label'
         customWorkspace 'C:/workspace'
       }
+     }
     stages {
         stage('Build') {
             steps {
