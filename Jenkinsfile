@@ -1,7 +1,6 @@
 pipeline {
-     agent any {
-        customWorkspace 'C:/workspace'
-      }
+     agent any 
+     customWorkspace 'C:/workspace'
     stages {
         stage('Build') {
             steps {
