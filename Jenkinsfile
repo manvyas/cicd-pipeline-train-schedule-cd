@@ -1,7 +1,7 @@
 pipeline {
    agent any
-    ws("C:/workspace") {
      stages {
+       ws("C:/workspace") {
         stage('Build') {
             steps {
                 echo 'Running build automation'
