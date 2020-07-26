@@ -3,11 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                ws("C:/workspace") {
                  echo 'Running build automation'
                  bat 'gradlew.bat build --no-daemon'
                  archiveArtifacts artifacts: 'dist/trainSchedule.zip'
-                }
             }
         }
         stage('DeployToStaging') {
