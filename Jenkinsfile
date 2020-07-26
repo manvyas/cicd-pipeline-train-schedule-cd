@@ -26,8 +26,8 @@ pipeline {
                                 ], 
                                 transfers: [
                                     sshTransfer(
-                                        sourceFiles: 'dist/trainSchedule.zip',
-                                        removePrefix: 'dist/',
+                                        sourceFiles: '/var/lib/jenkins/workspace/multi-branch-pipeline_master/dist/trainSchedule.zip',
+                                        removePrefix: '/var/lib/jenkins/workspace/multi-branch-pipeline_master/dist/',
                                         remoteDirectory: '/tmp',
                                         execCommand: 'sudo  rm -rf /opt/train-schedule/* && unzip /tmp/trainSchedule.zip -d /opt/train-schedule && sudo /bin/systemctl start train-schedule'
                                     )
@@ -58,8 +58,8 @@ pipeline {
                                 ], 
                                 transfers: [
                                     sshTransfer(
-                                        sourceFiles: 'dist/trainSchedule.zip',
-                                        removePrefix: 'dist/',
+                                        sourceFiles: '/var/lib/jenkins/workspace/multi-branch-pipeline_master/dist/trainSchedule.zip',
+                                        removePrefix: '/var/lib/jenkins/workspace/multi-branch-pipeline_master/dist/',
                                         remoteDirectory: '/tmp',
                                         execCommand: 'sudo  rm -rf /opt/train-schedule/* && unzip /tmp/trainSchedule.zip -d /opt/train-schedule && sudo /bin/systemctl start train-schedule'
                                     )
